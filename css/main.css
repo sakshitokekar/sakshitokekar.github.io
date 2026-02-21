@@ -22,7 +22,6 @@ body {
     color: var(--white);
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
-    cursor: none;
 }
 
 /* Custom cursor */
@@ -36,6 +35,20 @@ body {
     z-index: 9999;
     transition: transform 0.15s ease;
     mix-blend-mode: difference;
+}
+
+/* Enable custom cursor ONLY on desktop (mouse devices) */
+@media (hover: hover) and (pointer: fine) {
+    body {
+        cursor: none;
+    }
+}
+
+/* On touch devices → hide custom cursor */
+@media (hover: none) or (pointer: coarse) {
+    .cursor {
+        display: none;
+    }
 }
 
 /* Hide custom cursor on touch devices + restore default cursor */
@@ -116,6 +129,81 @@ nav {
     color: var(--lime);
 }
 
+/* Mobile nav button (hamburger) */
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 18px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+}
+
+.nav-toggle span + span { margin-top: 7px; }
+
+/* Responsive menu */
+@media (max-width: 900px) {
+    nav {
+        padding: 1rem 1.25rem;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 12px;
+        right: 12px;
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        gap: 0;
+        padding: 0.75rem;
+        border-radius: 16px;
+        background: rgba(13, 13, 26, 0.95);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(16px);
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 0.85rem 0.9rem;
+        border-radius: 12px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(181, 245, 66, 0.10);
+    }
+
+    /* When menu is open */
+    .nav-links.open {
+        display: flex;
+    }
+}
+
+/* Animate hamburger -> X */
+.nav-toggle.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
 /* HERO */
 #home {
     height: 130vh;
@@ -150,11 +238,11 @@ nav {
 }
 
 .hero-title-wrap {
-  min-height: 160px;
+    min-height: 160px;
 }
 
 .hero-sub {
-  min-height: 100px;
+    min-height: 100px;
 }
 
 @keyframes pulse {
@@ -584,14 +672,17 @@ section {
 }
 
 .skill-card-title {
-  font-family: 'DM Sans', sans-serif;   /* change font */
-  font-weight: 600;                     /* lighter */
-  font-size: 1rem;
-  margin-bottom: 0.9rem;
-  letter-spacing: 0;                    /* remove spread */
-  line-height: 1.35;
-  color: rgba(255,255,255,0.92);
-  text-align: center; 
+    font-family: 'DM Sans', sans-serif;
+    /* change font */
+    font-weight: 600;
+    /* lighter */
+    font-size: 1rem;
+    margin-bottom: 0.9rem;
+    letter-spacing: 0;
+    /* remove spread */
+    line-height: 1.35;
+    color: rgba(255, 255, 255, 0.92);
+    text-align: center;
 }
 
 .skill-chips {

@@ -1,11 +1,15 @@
-// Cursor
-const cursor = document.getElementById('cursor');
-let mx = 0, my = 0;
-document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
+// Custom cursor (desktop only)
+if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  const cursor = document.getElementById('cursor');
+  let mx = 0, my = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
     cursor.style.left = mx - 6 + 'px';
     cursor.style.top = my - 6 + 'px';
-});
+  });
+}
 
 // Hero slideshow
 const roles = [
@@ -146,3 +150,24 @@ reveals.forEach(r => observer.observe(r));
 
     startAuto();
 })();
+
+// Mobile navbar toggle
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  // Close menu when clicking a link (mobile)
+  navMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navMenu.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
