@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sakshi Tokekar — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <div class="cursor" id="cursor"></div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <div class="logo-mark">ST</div>
+      <div>
+        <div class="logo-text">Sakshi Tokekar</div>
+        <div class="logo-sub">Full Stack Engineer · Cloud & Data · SAP</div>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <div class="hero-left">
+      <div class="role-badges">
+        <span class="badge outline" data-role="0">Data Engineer</span>
+        <span class="badge outline" data-role="1">Full Stack Engineer</span>
+        <span class="badge filled active" data-role="2">SAP ABAP</span>
+      </div>
+      <div class="hero-title-wrap">
+        <div class="hero-title" id="title-0">Data Engineer.</div>
+        <div class="hero-title" id="title-1">Full Stack Engineer.</div>
+        <div class="hero-title active" id="title-2">SAP ABAP Dev.</div>
+      </div>
+      <p class="hero-sub" id="hero-sub">Building enterprise SAP solutions on S/4HANA and ECC with WRICEF, OData, and CDS
+        views.</p>
+      <div class="hero-btns">
+        <a href="#experience" class="btn-primary">Explore Work</a>
+        <a href="#" class="btn-outline" id="resume-btn">Resume ↗</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <label>Location</label>
+          <span>Dallas, TX</span>
+        </div>
+        <div class="hero-meta-item">
+          <label>Focus</label>
+          <span id="focus-text">S/4HANA · OData · CDS</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-card-bg"></div>
+      <div class="dot-grid"></div>
+      <div class="hero-glass-card photo-card">
+        <img src="assets/SakshiHeadshot.png" alt="Sakshi Tokekar">
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <div class="section-tag">About Me</div>
+        <h2 class="section-title">Building things that scale.</h2>
+        <p>I'm a Computer Science graduate student at UT Dallas (GPA 3.95) with 2+ years of professional experience
+          spanning SAP ABAP consulting, data engineering, and full-stack development.</p>
+        <p>From designing ETL pipelines on GCP at Tenet Healthcare to building enterprise SAP solutions at LTIMindtree,
+          I bring end-to-end ownership — from data to deployment.</p>
+        <p style="margin-top:1.5rem;">
+          <a href="mailto:sakshitokekar72@gmail.com" class="btn-primary" style="font-size:0.88rem;">Let's Connect →</a>
+        </p>
+      </div>
+      <div class="skills-grid reveal">
+        <div class="skill-block">
+          <h4>Cloud & Data</h4>
+          <p>GCP, BigQuery, Airflow/Composer, ETL/ELT, Cloud Storage, PySpark</p>
+        </div>
+        <div class="skill-block">
+          <h4>Backend</h4>
+          <p>Java, Spring Boot, Spring MVC, REST APIs, Microservices, JPA/Hibernate</p>
+        </div>
+        <div class="skill-block">
+          <h4>SAP</h4>
+          <p>S/4HANA, ECC, ABAP, OOABAP, CDS Views, OData, WRICEF, MM/SD/FICO</p>
+        </div>
+        <div class="skill-block">
+          <h4>Frontend & Tools</h4>
+          <p>Angular, Docker, Git, Python, SQL, Databricks, Agile/Scrum</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="skills-wrap">
+      <div class="reveal">
+        <div class="section-tag">Skills</div>
+        <h2 class="section-title">Skills by track.</h2>
+        <p class="skills-subtext">
+          Pick a track to see the tools and strengths I use most often.
+        </p>
+      </div>
+
+      <div class="track-tabs reveal">
+        <button class="track-tab active" data-skill="data">Data Engineering</button>
+        <button class="track-tab" data-skill="backend">Backend / Spring Boot</button>
+        <button class="track-tab" data-skill="sap">SAP ABAP</button>
+      </div>
+
+      <!-- DATA -->
+      <div class="skill-panel active reveal" id="skill-data">
+        <div class="skill-cards">
+          <div class="skill-card">
+            <div class="skill-card-title">Cloud & Warehousing</div>
+            <div class="skill-chips">
+              <span class="chip">GCP</span><span class="chip">BigQuery</span><span class="chip">Cloud Storage</span>
+              <span class="chip">IAM</span><span class="chip">Data Modeling</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Pipelines & Orchestration</div>
+            <div class="skill-chips">
+              <span class="chip">Airflow / Composer</span><span class="chip">ETL / ELT</span><span
+                class="chip">Python</span>
+              <span class="chip">SQL</span><span class="chip">Monitoring</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Big Data & Processing</div>
+            <div class="skill-chips">
+              <span class="chip">PySpark</span><span class="chip">Databricks</span><span
+                class="chip">Partitioning</span>
+              <span class="chip">Performance Tuning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BACKEND -->
+      <div class="skill-panel reveal" id="skill-backend">
+        <div class="skill-cards">
+          <div class="skill-card">
+            <div class="skill-card-title">Core Backend</div>
+            <div class="skill-chips">
+              <span class="chip">Java</span><span class="chip">Spring Boot</span><span class="chip">Spring MVC</span>
+              <span class="chip">REST APIs</span><span class="chip">Microservices</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Data & Persistence</div>
+            <div class="skill-chips">
+              <span class="chip">JPA / Hibernate</span><span class="chip">MySQL</span><span
+                class="chip">Transactions</span>
+              <span class="chip">Caching</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Reliability & Delivery</div>
+            <div class="skill-chips">
+              <span class="chip">Spring Security</span><span class="chip">JWT</span><span class="chip">Docker</span>
+              <span class="chip">Git</span><span class="chip">Testing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP -->
+      <div class="skill-panel reveal" id="skill-sap">
+        <div class="skill-cards">
+          <div class="skill-card">
+            <div class="skill-card-title">ABAP Development</div>
+            <div class="skill-chips">
+              <span class="chip">ABAP</span><span class="chip">OOABAP</span><span class="chip">ABAP Dictionary</span>
+              <span class="chip">WRICEF</span><span class="chip">Performance</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Modern SAP</div>
+            <div class="skill-chips">
+              <span class="chip">S/4HANA</span><span class="chip">HANA SQL</span><span class="chip">CDS Views</span>
+              <span class="chip">AMDP (basic)</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-title">Integration & Support</div>
+            <div class="skill-chips">
+              <span class="chip">OData</span><span class="chip">RFC</span><span class="chip">Debugging</span>
+              <span class="chip">SPAU/SPDD</span><span class="chip">SAP Notes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="exp-container">
+      <div class="reveal">
+        <div class="section-tag">Work Experience</div>
+        <h2 class="section-title">Where I've worked.</h2>
+      </div>
+      <div class="role-tabs reveal">
+        <button class="role-tab" data-panel="data">Data Engineer</button>
+        <button class="role-tab" data-panel="fullstack">Full Stack</button>
+        <button class="role-tab active" data-panel="sap">SAP ABAP</button>
+      </div>
+
+      <!-- DATA ENGINEER -->
+      <div class="exp-panel" id="panel-data">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Sep 2025 – May 2026</div>
+            <div class="timeline-role">Data Engineer Intern</div>
+            <div class="timeline-company">Tenet Healthcare · Dallas, TX</div>
+            <ul>
+              <li>Designed, enhanced, and maintained scalable ETL pipelines on GCP to process enterprise-scale
+                healthcare datasets.</li>
+              <li>Built and orchestrated Airflow (Cloud Composer) DAGs for reliable scheduling, monitoring, and recovery
+                of data workflows.</li>
+              <li>Optimized BigQuery SQL queries, reducing runtime and processing cost across large datasets.</li>
+              <li>Developed Python-based data transformation and automation frameworks to standardize pipeline
+                execution.</li>
+              <li>Collaborated with cross-functional teams in Agile sprints to ensure data quality, scalability, and
+                operational reliability.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2022 – Jul 2024</div>
+            <div class="timeline-role">Senior Consultant (Data)</div>
+            <div class="timeline-company">LTIMindtree Limited · Mumbai, India</div>
+            <ul>
+              <li>Engineered scalable enterprise applications integrating SAP HANA, ABAP, and Java-based OData services.
+              </li>
+              <li>Designed backend data flows and APIs to enable secure data exchange between SAP and external systems.
+              </li>
+              <li>Performed root cause analysis and performance tuning across multi-tier architectures.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Mar 2021 – Jun 2021</div>
+            <div class="timeline-role">Database Intern</div>
+            <div class="timeline-company">Trivia Softwares · Thane, India</div>
+            <ul>
+              <li>Implemented advanced MySQL concepts: database design, procedures, functions, and triggers.</li>
+              <li>Leveraged PL/SQL, Tkinter, and Python to build a robust system application with efficient database
+                management.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL STACK -->
+      <div class="exp-panel" id="panel-fullstack">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Jun 2025 – Aug 2025</div>
+            <div class="timeline-role">Software Engineer Intern</div>
+            <div class="timeline-company">Worldwide Express · Dallas, TX</div>
+            <ul>
+              <li>Developed 8+ reusable Angular components integrated with Spring Boot REST services.</li>
+              <li>Implemented end-to-end full-stack features across UI and backend service layers.</li>
+              <li>Improved frontend performance and API response handling; participated in peer code reviews and defect
+                resolution.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2022 – Jul 2024</div>
+            <div class="timeline-role">Senior Consultant (Backend)</div>
+            <div class="timeline-company">LTIMindtree Limited · Mumbai, India</div>
+            <ul>
+              <li>Developed backend integration services connecting SAP systems with external platforms via REST and
+                OData APIs.</li>
+              <li>Designed scalable service layers across multi-tier enterprise architecture.</li>
+              <li>Performed production issue debugging and root cause analysis.</li>
+            </ul>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">Aug 2020 – Sep 2020</div>
+            <div class="timeline-role">Java Intern</div>
+            <div class="timeline-company">Trivia Softwares · Thane, India</div>
+            <ul>
+              <li>Built Spring MVC + JPA layered backend services and REST APIs.</li>
+              <li>Improved query performance and exception handling across application layers.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAP ABAP -->
+      <div class="exp-panel active" id="panel-sap">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">Jul 2022 – Jul 2024</div>
+            <div class="timeline-role">Senior SAP ABAP Consultant</div>
+            <div class="timeline-company">LTIMindtree Limited · Mumbai, India</div>
+            <ul>
+              <li>Delivered end-to-end SAP ABAP developments for S/4HANA and ECC — requirement analysis, design,
+                development, testing, and production support.</li>
+              <li>Developed and enhanced WRICEF objects using OOABAP, ABAP Dictionary, and Module Pool Programming.</li>
+              <li>Built and consumed OData services and CDS views to support UI-based applications, analytics, and
+                system integrations.</li>
+              <li>Optimized custom programs using HANA-compliant syntax, improving performance and data retrieval
+                efficiency.</li>
+              <li>Reduced production defects by ~80% through effective debugging, dump analysis, and root-cause
+                resolution.</li>
+              <li>Led junior developers, conducted code reviews, and ensured adherence to SAP best practices.</li>
+              <li>Supported SAP system upgrades by implementing SAP Notes and resolving SPAU/SPDD adjustments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="reveal">
+      <div class="section-tag">Projects</div>
+      <h2 class="section-title">Things I've built.</h2>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-number">01 — Data Engineering</div>
+        <div class="project-title">Cloud Data Pipeline on GCP</div>
+        <div class="project-desc">End-to-end ETL pipeline using Cloud Storage, Airflow (Composer), Python, and BigQuery.
+          Implemented data validation and transformation logic to ensure accuracy and consistency across datasets.</div>
+        <div class="project-tags">
+          <span class="tag">GCP</span><span class="tag">Airflow</span><span class="tag">BigQuery</span><span
+            class="tag">Python</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">02 — ML / Big Data</div>
+        <div class="project-title">Friend Recommendation System</div>
+        <div class="project-desc">Large-scale recommendation model using PySpark, MapReduce, and Databricks. Processed
+          and analyzed high-volume datasets to generate data-driven user recommendations at scale.</div>
+        <div class="project-tags">
+          <span class="tag">PySpark</span><span class="tag">MapReduce</span><span class="tag">Databricks</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">03 — Reactive Backend</div>
+        <div class="project-title">Reactive Country & Weather Service</div>
+        <div class="project-desc">Non-blocking reactive APIs integrating multiple external services using Spring WebFlux
+          and Project Reactor. Implemented async pipelines with Mono/WebClient and reactive error handling with
+          fallback.</div>
+        <div class="project-tags">
+          <span class="tag">Spring WebFlux</span><span class="tag">Project Reactor</span><span
+            class="tag">WebClient</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">04 — Security</div>
+        <div class="project-title">Secure REST API Platform</div>
+        <div class="project-desc">Secured REST APIs with JWT authentication and role-based protection. Integrated MySQL
+          using JPA and layered architecture. Prepared Dockerized deployment pipeline.</div>
+        <div class="project-tags">
+          <span class="tag">Spring Security</span><span class="tag">JWT</span><span class="tag">MySQL</span><span
+            class="tag">Docker</span>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-number">05 — Automation</div>
+        <div class="project-title">Spring Boot Email & Acknowledgement Service</div>
+        <div class="project-desc">REST service for enquiry emails and automated acknowledgements. Configured SMTP and
+          dynamic email templates using Thymeleaf. Implemented client-server JSON request workflow.</div>
+        <div class="project-tags">
+          <span class="tag">Spring Boot</span><span class="tag">Thymeleaf</span><span class="tag">JavaMailSender</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="reveal">
+      <div class="section-tag">Education</div>
+      <h2 class="section-title">Academic background.</h2>
+    </div>
+    <div class="edu-timeline reveal">
+
+      <!-- Grad -->
+      <div class="edu-item current">
+        <div class="edu-dot" aria-hidden="true">🎓</div>
+
+        <div class="edu-card">
+          <div class="edu-header">
+            <div class="edu-degree">M.S. Computer Science</div>
+            <span class="edu-current-badge">Current</span>
+          </div>
+
+          <div class="edu-school">University of Texas at Dallas · Richardson, TX</div>
+
+          <div class="edu-meta">
+            <span class="gpa">GPA 3.95</span>
+            <span class="year">Expected May 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Undergrad -->
+      <div class="edu-item">
+        <div class="edu-dot" aria-hidden="true">📘</div>
+        <div class="edu-card">
+          <div class="edu-degree">B.E. Computer Engineering</div>
+          <div class="edu-school">University of Mumbai · Mumbai, India</div>
+          <div class="edu-meta">
+            <span class="gpa">GPA 3.83</span>
+            <span class="year">May 2022</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certifications">
+    <div class="reveal">
+      <div class="section-tag" style="margin-top:3rem;">Certifications</div>
+      <h2 class="section-title">Professional Certifications.</h2>
+
+      <div class="cert-slider reveal">
+        <div class="cert-glass-bg"></div>
+
+        <div class="cert-track">
+
+          <!-- SAP -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              SAP Certified Development Associate — SAP HANA 2.0 SPS06
+            </div>
+            <img
+              src="assets/Sakshi_Tokekar_SAP_Certified_Development_Associate___SAP_HANA_2_0_SPS06_Badge20230414-28-1iro2nk_page-0001.jpg"
+              alt="SAP HANA Certification">
+            <a class="cert-link" href="https://www.credly.com/go/MF07vyT9" target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- Microsoft -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              Microsoft Certification (Credly)
+            </div>
+            <img src="assets/Microsoft_Certified_Professional_Certificate_0_page-0001.jpg"
+              alt="Microsoft Certification">
+            <a class="cert-link"
+              href="https://www.credly.com/badges/5a2ea413-503e-49b8-8f08-af914032322e/linked_in_profile"
+              target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- Infosys -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              Infosys Certified Software Programmer
+            </div>
+            <img src="assets/Infosys Certification - Sakshi_page-0001.jpg" alt="Infosys Certification">
+            <a class="cert-link"
+              href="https://infytq.onwingspan.com/public-assets/Infosys-Certified-Software-Programmer_2024/7d07d885-83e9-4e86-941e-a91f6034d25f.pdf"
+              target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- Java -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              HackerRank Java Basic Certificate
+            </div>
+            <img src="assets/java_basic certificate_page-0001.jpg" alt="Java Certificate">
+            <a class="cert-link" href="https://www.hackerrank.com/certificates/2abe9c5c7a40" target="_blank"
+              rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- Databricks -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              Databricks Accredited GenAI Fundamentals
+            </div>
+            <img src="assets/Databricks_Accredited_Gen_AI_Fundamentals.png" alt="Databricks Certification">
+            <a class="cert-link" href="https://credentials.databricks.com/44b0f994-e700-41dd-8564-5ff13fcd8c80"
+              target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- DeepLearning.AI 1 -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              DeepLearning.AI — Attention & Transformer Concepts
+            </div>
+            <img src="assets/Attention_Transformer_Concepts.png" alt="DeepLearning AI Certificate">
+            <a class="cert-link"
+              href="https://learn.deeplearning.ai/accomplishments/a605fef7-87d3-4fd4-a338-e0f4898022f5?usp=sharing"
+              target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+          <!-- DeepLearning.AI 2 -->
+          <div class="cert-slide">
+            <div class="cert-title">
+              DeepLearning.AI — Transformer & LLM Concepts
+            </div>
+            <img src="assets/Transformer_LLM.png" alt="DeepLearning AI Certificate">
+            <a class="cert-link"
+              href="https://learn.deeplearning.ai/accomplishments/2aca9302-9cc2-4a7e-816a-0cbecacf6180?usp=sharing"
+              target="_blank" rel="noopener">
+              View Credentials ↗
+            </a>
+          </div>
+
+        </div>
+
+        <button class="cert-btn prev">‹</button>
+        <button class="cert-btn next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner reveal">
+      <div class="section-tag" style="justify-content:center;">Get In Touch</div>
+      <h2 class="section-title">Let's work together.</h2>
+      <p style="color:rgba(255,255,255,0.7); margin-top:1rem; font-size:1.05rem;">Open to Data Engineering, Full Stack,
+        and SAP ABAP roles. Let's build something great.</p>
+      <a class="contact-email" href="mailto:sakshitokekar72@gmail.com">sakshitokekar72@gmail.com</a>
+      <div class="contact-links">
+        <a class="contact-link" href="https://www.linkedin.com/in/sakshi-tokekar" target="_blank">↗ LinkedIn</a>
+        <a class="contact-link" href="https://github.com/sakshitokekar" target="_blank">↗ GitHub</a>
+        <a class="contact-link" href="mailto:sakshitokekar72@gmail.com">✉ Email Me</a>
+      </div>
+      <p style="margin-top:3rem; color:rgba(255,255,255,0.3); font-size:0.8rem; font-family:'Space Mono',monospace;">
+        Dallas, TX · 945-713-2754
+      </p>
+    </div>
+  </section>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
