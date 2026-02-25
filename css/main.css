@@ -307,7 +307,7 @@ nav {
 .hero-title {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
-    font-size: clamp(3rem, 5vw, 4.5rem);
+    font-size: clamp(2.4rem, 4.4vw, 3.8rem);
     line-height: 1;
     color: var(--lime);
     display: none;
@@ -898,6 +898,29 @@ section {
     flex-wrap: wrap;
 }
 
+.project-card-actions {
+    margin-top: 1rem;
+}
+
+.project-demo-btn {
+    padding: 0.55rem 1rem;
+    background: rgba(181, 245, 66, 0.12);
+    border: 1px solid rgba(181, 245, 66, 0.35);
+    border-radius: 999px;
+    color: var(--lime);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.project-demo-btn:hover {
+    background: var(--lime);
+    color: var(--dark);
+    border-color: var(--lime);
+}
+
 .tag {
     padding: 0.3rem 0.75rem;
     background: rgba(181, 245, 66, 0.1);
@@ -906,6 +929,76 @@ section {
     font-size: 0.72rem;
     color: var(--lime);
     font-family: 'Space Mono', monospace;
+}
+
+.demo-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 2000;
+}
+
+.demo-modal.open {
+    display: block;
+}
+
+.demo-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(13, 13, 26, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.demo-modal-dialog {
+    position: relative;
+    width: min(92vw, 920px);
+    max-height: 88vh;
+    margin: 6vh auto;
+    padding: 1.2rem;
+    border-radius: 18px;
+    background: #111426;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    overflow: auto;
+}
+
+.demo-modal-title {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    margin-bottom: 0.9rem;
+}
+
+.demo-modal-gif {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.demo-modal-close {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.75rem;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.demo-modal-error {
+    margin-top: 0.8rem;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.86rem;
+    display: none;
+}
+
+body.demo-modal-open {
+    overflow: hidden;
 }
 
 /* ============================= */
